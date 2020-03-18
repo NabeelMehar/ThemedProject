@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.horaapps.liz.ui.ThemedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:liz_background_style="accent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="@dimen/scroll_bar_size">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <org.horaapps.liz.ui.ThemedCardView
+                android:id="@+id/about_app_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:foreground="@drawable/ripple"
+                android:paddingBottom="10dp"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/leafpic_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"/>
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:src="@drawable/leaf_pic"/>
+                </RelativeLayout>
+
+                <org.horaapps.liz.ui.ThemedTextView
+                    android:id="@+id/about_app_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_app_title"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textSize="25sp"/>
+
+                <org.horaapps.liz.ui.ThemedTextView
+                    android:id="@+id/about_app_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:text="@string/about_app_description"
+                    android:layout_gravity="center"/>
+
+                <org.horaapps.liz.ui.ThemedTextView
+                    android:id="@+id/about_app_version"
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/about_app_version"/>
+            </LinearLayout>
+            </org.horaapps.liz.ui.ThemedCardView>
+
+            <org.horaapps.liz.ui.ThemedCardView
+                android:id="@+id/about_support_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_spacing"
+                android:clickable="true"
+                android:foreground="@drawable/ripple"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <org.horaapps.liz.ui.ThemedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_support"
+                    android:paddingStart="@dimen/medium_spacing"
+                    android:paddingTop="@dimen/medium_spacing"
+                    android:textSize="@dimen/medium_text"
+                    android:textStyle="bold"/>
+
+                <com.example.themedproject.about.AboutLink
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:linkTitle="@string/about_support_report_bug"
+                    app:linkIcon="@string/icon_bug_report"
+                    app:linkDescription="@string/about_support_report_bug_sub"/>
+
+
+
+
+            </LinearLayout>
+            </org.horaapps.liz.ui.ThemedCardView>
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</org.horaapps.liz.ui.ThemedLinearLayout>
